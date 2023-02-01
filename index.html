@@ -16,34 +16,34 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+  <header class="">
+    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select p-4">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
+        <!-- <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
+          loading="lazy"> -->
         <span class="ms-2">Gregslist®️</span>
       </a>
       <div class="ms-3 d-flex gap-4 align-items-center">
         <button class="btn btn-outline-light" onclick="app.carsController.show()">🚘 Cars</button>
-        <button class="btn btn-outline-light" onclick="app.jobsController.show()">👷 Jobs</button>
-        <button class="btn btn-outline-light" onclick="app.housesController.show()">🌵 Houses</button>
+        <button class="btn btn-outline-light" onclick="app.jobsController.show()">📝 Jobs</button>
+        <button class="btn btn-outline-light" onclick="app.housesController.show()">🏠 Houses</button>
       </div>
       <div class="text-end flex-grow-1 me-3">
         <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#listingForm"
-          aria-controls="listingForm" id="add-listing-button">🚙 Add Car</button>
+          aria-controls="listingForm" id="add-listing-button">no id if you see this text</button>
       </div>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
       <div class="row" id="listings">
-        
+
       </div>
     </div>
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
-      <p><small>Made with 💖 by CodeWorks</small></p>
+      <p><small>refer a friend for a 0.1% discount</small></p>
     </div>
   </footer>
 
@@ -56,7 +56,7 @@
     </div>
     <div class="offcanvas-body" id="the-actual-form">
 
-      
+
 
 
 

@@ -18,5 +18,9 @@
     "titleBar.inactiveBackground": "#42b88399",
     "titleBar.inactiveForeground": "#15202b99"
   },
+  "emmet.includeLanguages": {
+    "javascript": "html",
+    "vue-html": "html"
+  },
   "peacock.color": "#42b883"
 }
