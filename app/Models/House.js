@@ -22,7 +22,7 @@ export class House {
       <img
         src="${this.imgUrl}"
         alt="${this.name}" class="rounded">
-      <p><b>${this.name} ${this.bedrooms}b/${this.bathrooms}bth - $${this.price}</b></p>
+      <p><b>${this.name} <br> ${this.bedrooms}b/${this.bathrooms}bth - $${this.price}</b></p>
     </div>
   </div>
     `
@@ -38,7 +38,7 @@ export class House {
 
   static HouseForm() {
     return /*html*/`
-    <form onsubmit="app.carsController.handleFormSubmit()">
+    <form onsubmit="app.housesController.handleFormSubmit()">
 
         <div class="form-floating mb-3">
           <input type="text" class="form-control" name="name" required minlength="3" maxlength="30">
@@ -71,13 +71,29 @@ export class House {
           <input type="number" class="form-control" name="price" required min="0">
           <label for="price"> Price</label>
         </div>
+
+
+        <div class="row">
         
-
-
+        <div class="col-5">
         <div class="form-floating mb-3">
-          <input type="number" class="form-control" name="year" required min="1886" max="9999">
-          <label for="year">Year</label>
+        <input type="number" class="form-control" name="year" required min="1886" max="9999">
+        <label for="year">Year</label>
         </div>
+        </div>
+        
+        
+        <div class="col-7">
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" name="sqft" required min="100" max="99999">
+          <label for="sqft">sqft</label>
+        </div>
+        </div>
+        
+        
+        </div>
+
+        
 
         <div class="form-floating mb-3">
           <input type="url" class="form-control" name="imgUrl">

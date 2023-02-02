@@ -1,5 +1,7 @@
 import { appState } from "../AppState.js"
 import { House } from "../Models/House.js"
+import { housesService } from "../Services/HousesService.js"
+import { getFormData } from "../Utils/FormHandler.js"
 import { Pop } from "../Utils/Pop.js"
 import { setHTML, setText } from "../Utils/Writer.js"
 
@@ -11,8 +13,8 @@ function _drawHouses() {
 }
 
 function _drawHouse(){
-  setText('listingModalLabel', `${appState.houses.name} ${appState.houses.price}`)
-  setHTML('listing-modal-body', appState.houses.HousesDetailsTemplate)
+  // setText('listingModalLabel', `${appState.houses.name} ${appState.houses.price}`)
+  // setHTML('listing-modal-body', appState.houses.HousesDetailsTemplate)
 }
 export class HousesController {
 
@@ -32,6 +34,22 @@ export class HousesController {
 
 
     _drawHouses()
+  }
+
+  handleFormSubmit() {
+    try{
+      event.preventDefault()
+      const form = event.target
+      const formData = getFormData(form)
+
+      housesService.createHouse(formData)
+
+      console.log(formData)
+      form.reset()
+    } catch (error){
+      Pop.error(error)
+    }
+
   }
 
   async deleteCar(houseId) {
