@@ -16,7 +16,9 @@ class HousesService {
  }
 
  setActiveHouse(houseId){
-  const house = appState.houses.find(h=>h.id==houseId)
+  const house = appState.houses.find(h=>h.id == houseId)
+
+  // const house = appState.houses.find( h => h.id == houseId)
   if (!house){
     throw new Error('there is no house with that id')
   }

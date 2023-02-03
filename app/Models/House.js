@@ -3,7 +3,7 @@ import { generateId } from "../Utils/generateId.js";
 
 export class House {
   constructor(data){
-    this.id = data.id || generateId()
+    this.id = generateId()
     this.year = data.year
     this.name = data.name
     this.bedrooms = data.bedrooms
@@ -31,7 +31,9 @@ export class House {
   get HouseDetailsTemplate(){
     return /*html*/`
       <div>
-        <button class="btn btn-danger" data-bs-dismiss="modal" onclick="app.housesController.deleteHouse('${this.id}')">DELETE THE House!!!!!</button>
+        <button class="btn btn-danger" data-bs-dismiss="modal" onclick= "app.housesController.deleteHouse('${this.id}')">
+        
+        DELETE THE House!!!!!</button>
       </div>
     `
   }
@@ -57,10 +59,10 @@ export class House {
         </div>
 
         <div class="col-6">
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" name="bathrooms" required>
-          <label for="bathrooms">Bathrooms</label>
-       </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" name="bathrooms" required>
+            <label for="bathrooms">Bathrooms</label>
+          </div>
         </div>
         
         
